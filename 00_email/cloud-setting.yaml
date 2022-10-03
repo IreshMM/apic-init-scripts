@@ -1,0 +1,6 @@
+type: cloud_setting
+api_version: 2.0.0
+mail_server_url: !? $env.MAIL_SERVER_URL
+email_sender:
+  name: APIC Administrator
+  address: apicadm@nsb.local

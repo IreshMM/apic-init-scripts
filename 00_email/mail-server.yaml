@@ -1,0 +1,12 @@
+type: mail_server
+api_version: 2.0.0
+name: primary-mail-server
+title: Primary Mail Server
+host: smtp.gmail.com
+port: 587
+credentials:
+  password: pass
+  username: mail4iresh
+timeout: 10000
+secure: true
+tls_client_profile_url: !? $env.DEFAULT_TLS_CLIENT_PROFILE
