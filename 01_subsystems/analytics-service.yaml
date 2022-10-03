@@ -1,0 +1,4 @@
+type: analytics_service
+name: analytics-service
+title: Analytics Service
+endpoint: 'https://analytics-client.pr-apic-anytcs.nsb.local'

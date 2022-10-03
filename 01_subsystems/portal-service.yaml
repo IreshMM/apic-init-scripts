@@ -1,0 +1,8 @@
+title: Portal Service
+name: portal-service
+endpoint: https://portal-admin.pr-apic-devptl.nsb.local
+web_endpoint_base: https://portal-www.pr-apic-devptl.nsb.local
+visibility:
+  group_urls: null
+  org_urls: null
+  type: public
