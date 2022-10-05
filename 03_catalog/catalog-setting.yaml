@@ -1,0 +1,4 @@
+portal:
+  endpoint: !? $env.CATALOG_ENDPOINT
+  portal_service_url: !? $env.PORTAL_SERVICE_URL
+  type: drupal
