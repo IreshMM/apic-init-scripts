@@ -1,0 +1,8 @@
+---
+type: org
+org_type: provider
+api_version: 2.0.0
+name: provider-organization-001
+title: Provider-Organization-001
+state: enabled
+owner_url: !? $env.OWNER_URL
