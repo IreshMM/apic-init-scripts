@@ -5,7 +5,7 @@ title: Primary Mail Server
 host: smtp.gmail.com
 port: 587
 credentials:
-  password: pass
+  password: !? $env.MAIL_SERVER_PASS
   username: mail4iresh
 timeout: 10000
 secure: true

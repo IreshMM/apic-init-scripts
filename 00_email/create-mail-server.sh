@@ -12,6 +12,7 @@ export DEFAULT_TLS_CLIENT_PROFILE=$(apic tls-client-profiles:list-all -s $SERVER
 yglu mail-server.yaml > /tmp/mail-server.yaml
 
 export MAIL_SERVER_URL=$(apic mail-servers:create -s $SERVER -o $ADMIN_ORG /tmp/mail-server.yaml --format json | jq -r '.url')
+export MAIL_SERVER_PASS=${MAIL_SERVER_PASS:-pass}
 
 yglu cloud-setting.yaml > /tmp/cloud-setting.yaml
 
