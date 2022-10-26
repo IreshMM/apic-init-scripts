@@ -1,8 +1,8 @@
 ---
 name: api-gateway-service
 title: API Gatway Service
-endpoint: https://pr-apic-dpgw.nsb.local:3000
-api_endpoint_base: https://pr-apic-dpgw-fe.nsb.local
+endpoint: https://pr-apic-dpgw-be.apic.nsb.local:3000
+api_endpoint_base: https://pr-apic-dpgw-fe.apic.nsb.local
 tls_client_profile_url: !? $env.DEFAULT_TLS_CLIENT_PROFILE_URL
 gateway_service_type: datapower-api-gateway
 visibility:
