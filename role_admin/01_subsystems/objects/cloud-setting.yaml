@@ -1,0 +1,2 @@
+gateway_service_default_urls:
+  - !? $env.GATEWAY_SERVICE_URL

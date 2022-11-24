@@ -21,11 +21,7 @@ PORTAL_WWW_URL=$(apic portal-services:get -s $SERVER -o $P_ORG_NAME --availabili
 
 apic catalogs:create -s $SERVER -o $P_ORG_NAME $CATALOG_OBJ
 
-CONFIGURED_GATEWAY_OBJ=${SCRIPT_ROOT}/objects/configured-gateway-service.yaml
-yglu $CONFIGURED_GATEWAY_OBJ > /tmp/configured-gateway-service.yaml 
-CONFIGURED_GATEWAY_OBJ=/tmp/configured-gateway-service.yaml 
-
-apic configured-gateway-services:create --scope catalog -s $SERVER -o $P_ORG_NAME -c $CATALOG_NAME $CONFIGURED_GATEWAY_OBJ
+sleep 2 # Until portal becomes ready
 
 CATALOG_SETTING_OBJ=${SCRIPT_ROOT}/objects/catalog-setting.yaml
 export CATALOG_ENDPOINT="${PORTAL_WWW_URL}/${P_ORG_NAME}/${NAME}"

@@ -15,4 +15,8 @@ GATEWAY_OBJ=${SCRIPT_ROOT}/../objects/gateway-service.yaml
 yglu $GATEWAY_OBJ > /tmp/gateway-service.yaml
 GATEWAY_OBJ=/tmp/gateway-service.yaml
 
-apic gateway-services:create -s $SERVER -o $ADMIN_ORG --availability-zone availability-zone-default $GATEWAY_OBJ
+export GATEWAY_SERVICE_URL=$(apic gateway-services:create -s $SERVER -o $ADMIN_ORG --availability-zone availability-zone-default --format json $GATEWAY_OBJ | jq -r '.url')
+
+CLOUD_SETTING_OBJ=${SCRIPT_ROOT}/../objects/cloud-setting.yaml
+yglu $CLOUD_SETTING_OBJ > /tmp/cloud-setting.yaml
+apic cloud-settings:update -s $SERVER /tmp/cloud-setting.yaml
